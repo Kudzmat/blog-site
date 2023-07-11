@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "Blog",
     "crispy_forms",
     "crispy_bootstrap5",
-    "django_cleanup.apps.CleanupConfig"
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 # crispy forms supports bootstrap

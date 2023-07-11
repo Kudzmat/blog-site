@@ -32,7 +32,7 @@ class Comments(models.Model):
         ordering = ['-comment_date']  # latest comment will be at the top
 
     def __str__(self):
-        return self.blog_post
+        return self.comment
 
 
 # A like will be linked to a user and a blog post

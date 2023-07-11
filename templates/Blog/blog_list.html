@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load custom_filters %}
+{% load crispy_forms_tags %}
 {% block title %}
 Home
 {% endblock %}
@@ -16,14 +17,15 @@ Home
 
 
     <div class="col-sm-8">
-        <p>{{ blog.blog_content|range_filter|linebreaks }}</p>
+        <p>{{ blog.blog_content|range_filter|linebreaks }}
+            <a href="{% url 'Blog:read_post' slug=blog.slug %}">Read More</a>
+        </p>
         <h6>Posted By: {{ blog.author }}</h6>
+        <h6>{{ blog.blog_comment.count }} Comment(s)</h6>
+
     </div>
 
 </div>
-
-
-
 {% endfor %}
 
 {% endblock %}
